@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sti.juprimaven.model.Customer;
+
 @RestController
 //@RequestMapping("/test")
 public class GenericEntityController {
@@ -51,17 +53,7 @@ public class GenericEntityController {
 				;
 	}
 	
-	//Customer GetList
-	@GetMapping("/customers")
-	public List<Customer> getList(){
-		Customer cs = new Customer();
-		cs.setFirstName("Arif");
-		ArrayList<Customer> list = new ArrayList<Customer>();
-		list.add(cs);
-		return list;
-	}
-	
-	//Customer Update
+	//Customer Put Update
 	@PutMapping("/customer")
 	public Customer customerupdate(@RequestParam ("data") String customer) {
 		Customer cs = new Customer();
@@ -79,6 +71,23 @@ public class GenericEntityController {
 		
 		return "id = "+customerNumber+ " sudah dihapus";
 	}
+	
+	//Customer GetList
+	@GetMapping("/customers")
+	public List<Customer> getList(){
+		Customer cs = new Customer();
+		cs.setFirstName("Arif");
+		cs.setLastName("Setyo");
+		cs.setPhoneNumber("087758221567");
+		ArrayList<Customer> list = new ArrayList<Customer>();
+		list.add(cs);
+		return list;
+	}
+	
+	
+	
+	
+	
 	
 	
 	
