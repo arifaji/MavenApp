@@ -7,26 +7,29 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "customer")
 public class Customer {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name = "customernumber")
 	private int customerNumber;
 	
-	@Column
+	@Column(name = "firstname")
 	private String firstName;
-	@Column
+	@Column(name = "lastname")
 	private String lastName;
-	@Column
+	@Column(name = "birthdate")
 	private Date birthDate;
-	@Column
+	@Column(name = "username")
 	private String username;
-	@Column
+	@Column(name = "Password")
 	private String password;
-	@Column
+	@Column(name = "phonetype")
 	private String phoneType;
-	@Column
+	@Column(name = "phonenumber")
 	private String phoneNumber;
 	
 	public Customer () {}

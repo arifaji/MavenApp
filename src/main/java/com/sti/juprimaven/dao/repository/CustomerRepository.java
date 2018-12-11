@@ -5,6 +5,6 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import com.sti.juprimaven.model.Customer;
 
 
-public interface CustomerRepository extends PagingAndSortingRepository<Customer, String> {
+public interface CustomerRepository extends PagingAndSortingRepository<Customer, Integer> {
 
 }

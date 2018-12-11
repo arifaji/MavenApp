@@ -21,7 +21,7 @@ public class CustomerDaoImpl extends BaseImpl implements CustomerDao {
 	@Override
 	public Customer getById(int id) throws Exception {
 		// TODO Auto-generated method stub
-		return respository.findOne(String.valueOf(id));
+		return respository.findOne(id);
 	}
 
 	@Override
